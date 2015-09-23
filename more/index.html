@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="Miscellaneous information on basal-bolus dosing.">
+  <meta name="keywords" content="my insulin, myinsulin, insulin, calculator, desktop, full, Windows, Mac, iPhone, android, mobile, web app, blood glucose, mangement, hospital, glargine, basal, normal, bolus, regimen, basal-bolus, nutritional, supplemental">
+  <META HTTP-EQUIV="Cache-Control" CONTENT="max-age=0">
+  <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+  <META http-equiv="expires" content="0">
+  <META HTTP-EQUIV="Expires" CONTENT="Tue, 01 Jan 1980 1:00:00 GMT">
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  
+  <style type="text/css">
+		@import url("../styles.css");
+	</style>
+  
+  <script type="text/javascript" src="../caption.js"></script>
+  
+  <script type="text/javascript" src="convert.js"></script>
+	
+	<title>MyInsul.in -- More</title>
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27016394-1']);
+  _gaq.push(['_setDomainName', 'myinsul.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+	
+	</head>
+
+<body>
+
+<div id="container">
+  <div id="page">
+    <div id="header">
+
+      <ul><li><a href="../contact/">Contact</a></li><li><a href="../disclaimer/">Disclaimer</a></li><li><a href="../about/">About</a></li></ul>
+
+      <div id="headerlogo">
+        <h1><a href="../"><img src="../images/logo.png" alt="MyInsul.in" width="195" height="34"></a></h1><img class="logoline" src="../images/line.png" alt="" width="9" height="34"><p class="tagline">Insulin dosing for physicians.</p>
+      </div>
+
+    </div>
+<a name="loading"></a>
+    <div id="capps">
+      <div id="capps1">
+        <h2><a href="../new/">New plan &raquo;</a></h2>
+      </div>
+      
+      <div id="capps2">
+        <h2><a href="../tit/">Titrate &raquo;</a></h2>
+      </div>
+      
+      <div id="capps3">
+        <h2><a href="../convert/">Convert &raquo;</a></h2>
+      </div>
+      
+      <div id="capps4">
+        <h2><a href="../discharge/">Discharge &raquo;</a></h2>
+      </div>
+      
+      <div id="capps5">
+        <h2><a href="../manuals/">Manual &raquo;</a></h2>
+      </div>
+      
+      <div id="capps6">
+        <h2><span class="deact">More &raquo;</span></h2>
+      </div>
+    </div>
+    <div id="whole">
+      <h2>A1c to estimated average glucose conversion</h2>
+      <div class="step">
+      <form action="#" name="a1c">
+        <div style="display: inline"><div class="large" style="display: inline" onclick="TINY.box.show('caption/a1c.html',1,300,0,1)">A1c:<img src="../images/q.jpg" alt="More information"> </div><input class="large" type="text" name="input" onkeyup="a1cconvert()" size="4" maxlength="4"></div>
+      </form>
+      <span id="output" class="answer" style="float:none;">0</span><span class="large">&nbsp;mg/dL</span>
+      </div>
+
+      <h2>Body Mass Index Calculator</h2>
+      <div class="step">
+    <form name="bmi" action="#">
+    <div style="display: inline">
+      <span class="large">ft: </span>
+      <select name="feet" onchange="bmiconvert()" class="large">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5" selected="selected">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <span class="large"> in: </span>
+      <select name="inches" onchange="bmiconvert()" class="large">
+        <option value="0" selected="selected">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
+      <span class="large"> Weight: </span>
+      <INPUT TYPE='text' NAME="BW" ONKEYUP="bmiconvert()" class="large" size=3 maxlength=3>
+        <label for="kg" class="large">kg:</label><input type="radio" name="weight" id="kg" onclick="setkg()" checked="checked"> 
+        <label for="lb" class="large">lb:</label><input type="radio" name="weight" id="lb" onclick="setlb()">
+    </div>
+    </form>
+    <span id="bmi" class="answer" style="float:none;">0</span><span class="large">&nbsp;Body Mass Index</span>
+    </div>
+
+
+      <h2>Hypoglycemia treatment</h2>
+      <div class="step">
+        <span style="font-weight:bold">Hypoglycemia is commonly over-treated.</span><br>IV dextrose should only be used if mental status is altered or patient is NPO. 
+	<ul><li>Standard treatment:<ul><li>15 gm glucose = 1 tube Glutose gel<br><span style="font-weight:bold">- OR -</span></li>
+	<li>4 oz juice/non-diet soda drink.</li></ul></li></ul>
+	<ul><li>For NPO patient:<ul><li>25 mL dextrose 50% IV.</li></ul></li></ul>
+	Repeat BG in 15 minutes. Protocol allows RN to initiate treatment as a verbal order of the licensed independent practitioner (LIP) prior to actually notifying the LIP.
+      </div>
+      <h2>Insulin Types</h2>
+      <div class="step">
+        This link will take you away from this program opening a PDF:<br>
+        <a href="insulins.pdf">Insulins table</a>
+		<br>
+<table id='InsulinsTable'>
+<tr>
+ <td rowspan="2">Class</td>
+ <td rowspan="2">Name</td>
+ <td rowspan="2">Brand</td>
+ <td rowspan="2">Via</td>
+ <td rowspan="2"><abbr title="Prescription">Rx</abbr>/<abbr title="Over-the-counter">OTC</abbr></td>
+ <td rowspan="2">Onset</td>
+ <td rowspan="2">Peak</td>
+ <td rowspan="2">Duration</td>
+ <td colspan="3">Price* <sup><a href="http://courses.washington.edu/pharm504/Insulin%20Chart.pdf">Source</a></sup></td>
+</tr>
+<tr>
+ <td title="1,000 Units">10ml Vial</td>
+ <td title="5-pack, 1,500 Units">5x3ml Pen Cartridge</td>
+<tr>
+ <td rowspan="3">Rapid Acting</td>
+ <td class="InsulinsRapid">Aspart</td>
+ <td class="InsulinsRapid">Novolog</td>
+ <td class="InsulinsRapid"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+ <td class="InsulinsRapid"><abbr title="Prescription">Rx</abbr></td>
+ <td rowspan="3" class="InsulinsRapid">5-15 min</td>
+ <td rowspan="3" class="InsulinsRapid">1-2 hr</td>
+ <td rowspan="3" class="InsulinsRapid">3-5 hr</td>
+ <td class="InsulinsRapid">$102</td>
+ <td class="InsulinsRapid">$205</td>
+</tr>
+<tr>
+ <td class="InsulinsRapid">Lispro</td>
+ <td class="InsulinsRapid">Humalog</td>
+ <td class="InsulinsRapid"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+ <td class="InsulinsRapid"><abbr title="Prescription">Rx</abbr></td>
+ <td class="InsulinsRapid">$96</td>
+ <td class="InsulinsRapid">$183</td>
+</tr>
+<tr>
+ <td class="InsulinsRapid">Glulisine</td>
+ <td class="InsulinsRapid">Apidra</td>
+ <td class="InsulinsRapid"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+ <td class="InsulinsRapid"><abbr title="Prescription">Rx</abbr></td>
+ <td class="InsulinsRapid">$96</td>
+ <td class="InsulinsRapid">$184</td>
+</tr>
+<tr>
+  <td rowspan="2">Short Acting</td>
+  <td class="InsulinsShort">Regular</td>
+  <td class="InsulinsShort">Novolin R</td>
+  <td class="InsulinsShort"><img src="vial.png" alt="Vial" title="Vial"></td>
+  <td class="InsulinsShort"><abbr title="Over-the-counter">OTC</abbr></td>
+  <td rowspan="2" class="InsulinsShort">30-60 min</td>
+  <td rowspan="2" class="InsulinsShort">2-4 hr</td>
+  <td rowspan="2" class="InsulinsShort">4-8 hr</td>
+  <td rowspan="2" class="InsulinsShort">$53</td>
+  <td rowspan="2" class="InsulinsShort">$121</td>
+</tr>
+<tr>
+  <td class="InsulinsShort"></td>
+  <td class="InsulinsShort">Humulin R</td>
+  <td class="InsulinsShort"><img src="vial.png" alt="Vial" title="Vial"></td>
+  <td class="InsulinsShort"><abbr title="Over-the-counter">OTC</abbr></td>
+</tr>
+<tr>
+  <td rowspan="2">Intermediate Acting</td>
+  <td class="InsulinsInt">NPH</td>
+  <td class="InsulinsInt">Novolin N</td>
+  <td class="InsulinsInt"><img src="vial.png" alt="Vial" title="Vial"></td>
+  <td class="InsulinsInt"><abbr title="Over-the-counter">OTC</abbr></td>
+  <td rowspan="2" class="InsulinsInt">2-4 hr</td>
+  <td rowspan="2" class="InsulinsInt">7-8 hr</td>
+  <td rowspan="2" class="InsulinsInt">10-18 hr</td>
+  <td rowspan="2" class="InsulinsInt">$52</td>
+  <td rowspan="2" class="InsulinsInt">$121</td>
+</tr>
+<tr>
+  <td class="InsulinsInt"></td>
+  <td class="InsulinsInt">Humulin N</td>
+  <td class="InsulinsInt"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+  <td class="InsulinsInt"><abbr title="Over-the-counter">OTC</abbr></td>
+</tr>
+<tr>
+  <td rowspan="2">Long acting</td>
+  <td class="InsulinsLong">Glargine</td>
+  <td class="InsulinsLong">Lantus</td>
+  <td class="InsulinsLong"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="cart.png" alt="Cartridge" title="Cartridge"></td>
+  <td class="InsulinsLong"><abbr title="Prescription">Rx</abbr></td>
+  <td rowspan="2" class="InsulinsLong">2-4 hr</td>
+  <td rowspan="2" class="InsulinsLong">None</td>
+  <td rowspan="2" class="InsulinsLong">24 hr</td>
+  <td class="InsulinsLong">$97</td>
+  <td class="InsulinsLong">$177</td>
+</tr>
+<tr>
+  <td class="InsulinsLong">Detemir</td>
+  <td class="InsulinsLong">Levemir</td>
+  <td class="InsulinsLong"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+  <td class="InsulinsLong"><abbr title="Prescription">Rx</abbr></td>
+  <td class="InsulinsLong">$95</td>
+  <td class="InsulinsLong">$182</td>
+</tr>
+<tr>
+  <td rowspan="6">Premixed&dagger;</td>
+  <td class="InsulinsPre">NPH /Regular</td>
+  <td class="InsulinsPre">Novolin 70/30</td>
+  <td class="InsulinsPre"><img src="vial.png" alt="Vial" title="Vial"></td>
+  <td class="InsulinsPre"><abbr title="Over-the-counter">OTC</abbr></td>
+  <td rowspan="3" class="InsulinsPre">30-60 min</td>
+  <td rowspan="3" class="InsulinsPre">??</td>
+  <td rowspan="3" class="InsulinsPre">10-18 hr</td>
+  <td rowspan="3" class="InsulinsPre">$54</td>
+  <td rowspan="2" class="InsulinsPre">$135</td>
+</tr>
+<tr>
+  <td class="InsulinsPre"></td>
+  <td class="InsulinsPre">Humulin 70/30</td>
+  <td class="InsulinsPre"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+  <td class="InsulinsPre"><abbr title="Over-the-counter">OTC</abbr></td>
+</tr>
+<tr>
+  <td class="InsulinsPre"></td>
+  <td class="InsulinsPre">Humulin 50/50</td>
+  <td class="InsulinsPre"><img src="vial.png" alt="Vial" title="Vial"></td>
+  <td class="InsulinsPre"><abbr title="Over-the-counter">OTC</abbr></td>
+  <td class="InsulinsPre"></td>
+</tr>
+<tr>
+  <td class="InsulinsPre">NPH /Aspart</td>
+  <td class="InsulinsPre">Novolog Mix 70/30</td>
+  <td class="InsulinsPre"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+  <td class="InsulinsPre"><abbr title="Prescription">Rx</abbr></td>
+  <td rowspan="3" class="InsulinsPre">5-15 min</td>
+  <td rowspan="3" class="InsulinsPre">1-2 hr</td>
+  <td rowspan="3" class="InsulinsPre">10-18 hr</td>
+  <td rowspan="3" class="InsulinsPre">$105</td>
+  <td rowspan="3" class="InsulinsPre">$200</td>
+<tr>
+  <td class="InsulinsPre">NPH /Lispro</td>
+  <td class="InsulinsPre">Humulog Mix 50/50</td>
+  <td class="InsulinsPre"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+  <td class="InsulinsPre"><abbr title="Prescription">Rx</abbr></td>
+</tr>
+<tr>
+  <td class="InsulinsPre"></td>
+  <td class="InsulinsPre">Humalog Mix 70/30</td>
+  <td class="InsulinsPre"><img src="vial.png" alt="Vial" title="Vial">&nbsp;&nbsp;<img src="pen.png" alt="Pen" title="Pen"></td>
+  <td class="InsulinsPre"><abbr title="Prescription">Rx</abbr></td>
+</tr>
+</table>
+<br>&dagger; Not recommended for inpatients; not easily titrated. Recommend switching to a basal-bolus insulin regimen for hospital stay.
+<br>* Approximate
+      </div>
+      <h2>References</h2>
+      <div class="step">
+      <ol>
+        <li>Umpierrez, G. E. <i>et al.</i> <a href="http://www.endo-society.org/guidelines/upload/FINAL-Standalone-Management-of-Hyperglycemia-Guideline.pdf">Management of Hyperglycemia in Hospitalized Patients in Non-Critical Care Setting: An Endocrine Society Clinical Practice Guideline</a>. <i>Journal of Clinical Endocrinology &amp; Metabolism</i> <b>97</b>, 16–38 (2012).</li>
+        <li>Braithwaite, S., Clark, L., Dacenko-Grawe, L. &amp; Devi, R. <a href="http://cdn.intechweb.org/pdfs/23132.pdf">Prevention of Hospital Hypoglycemia by Algorithm Design: A Programming Pathway for Electronic Order Entry</a>. <i>Diabetes – Damages and Treatments</i> 183–206 (2011).</li>
+        <li>Johns Hopkins Glucose Management Committee. <a href="http://www.netorthodoc.org/DiabetesMgmtBooklet8pages.pdf">PRESCRIBER TOOLS FOR INPATIENT DIABETES MANAGEMENT</a> [Internet]. 2010. Available from: <a href="http://www.netorthodoc.org/DiabetesMgmtBooklet8pages.pdf">http://www.netorthodoc.org/DiabetesMgmtBooklet8pages.pdf</a></li>
+        <li>Inzucchi SE. <a href="http://www.nejm.org/doi/pdf/10.1056/NEJMcp060094">Management of Hyperglycemia in the Hospital Setting</a>. <i>New England Journal of Medicine</i> 2006</li>
+        <li>Maynard G, Lee J, Phillips G, Fink E, Renvall M. <a href="http://www.smjr.org/files/endo/J%20Hosp%20Med%202009%204(1)%203-15.pdf">Improved inpatient use of basal insulin, reduced hypoglycemia, and improved glycemic control: effect of structured subcutaneous insulin orders and an insulin management algorithm</a>. <i>Journal of hospital medicine</i> (Online) 2009;4(1):3–15.</li>
+        <li>Barnard K, Batch BC, Lien LF. <a href="http://www.springer.com/cda/content/document/cda_downloaddocument/9781607610052-c1.pdf?SGWID=0-0-45-998547-p173874865">Subcutaneous Insulin: A Guide for Dosing Regimens in the Hospital</a>. <i>Glycemic Control in the Hospitalized Patient</i> 2011;:7–16.</li>
+        <li>Korytkowski MT, Salata RJ, Koerbel GL, <i>et al.</i> <a href="http://care.diabetesjournals.org/content/32/4/594.full.pdf">Insulin Therapy and Glycemic Control in Hospitalized Patients With Diabetes During Enteral Nutrition Therapy: A randomized controlled clinical trial</a>. <i>Diabetes Care</i> 2009;32(4):594–6. </li>
+        <li>Magaji V. <a href="http://piediabeticoceped.com/hyperg2011jan%20cd.pdf">Inpatient Management of Hyperglycemia and Diabetes</a>. <i>Clinical Diabetes</i> 29, 3-9 2011.</li>
+        <li>Kansagara D, Fu R, Freeman M, Wolf F, Helfand M. <a href="http://annals.org/data/Journals/AIM/20225/0000605-201102150-00008.pdf">Intensive insulin therapy in hospitalized patients: a systematic review</a>. <i>Ann Intern Med</i> 2011;154(4):268–82.</li>
+        <li>Bhargava A, Johnson JF, Weir JP. <a href="http://clinical.diabetesjournals.org/content/27/2/91.full.pdf#page=1&view=FitH">Case Series: Premixed Insulin Dosing in Actual Practice: Two-Thirds in AM, One-Third in PM, or Half and Half?</a> <i>Clinical Diabetes</i> 2009;27(2):91–5. </li>
+        <li>Inzucchi SE, Bergenstal RM, Buse JB, <i>et al.</i> <a href="http://care.diabetesjournals.org/content/35/6/1364.full.pdf#page=1&view=FitH">Management of hyperglycemia in type 2 diabetes: a patient-centered approach: position statement of the American Diabetes Association (ADA) and the European Association for the Study of Diabetes (EASD)</a>. <i>Diabetes Care</i> 2012;35(6):1364–79.</li>
+      </ol>
+      </div>
+    </div>
+    
+  <div id="footer">
+    <ul>
+      <li><a href="../">Home</a> &nbsp;|&nbsp;</li>
+      <li><a href="../contact/">Contact</a> &nbsp;|&nbsp;</li>
+      <li><a href="../disclaimer/">Disclaimer</a> &nbsp;|&nbsp;</li>
+      <li><a href="../about/">About</a></li>
+    </ul>
+    <p><span class="name">Annelise Cummings and Alexander Eskil Harding</span><br>Portland, Oregon &nbsp;|&nbsp; <a href="tel:5033336320">(503).333.6320</a><br>
+    <a href="mailto:webmaster@myinsul.in">webmaster@myinsul.in</a></p>
+  </div>
+</div>
+</div>
+<div id="sitenotes">Copyright © 2012 Annelise Cummings &amp; Alexander Eskil Harding &nbsp;|&nbsp; All rights reserved &nbsp;|&nbsp; <a href="http://validator.w3.org/check?uri=referer">html 4.01 strict</a> and <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://myinsul.in/styles.css&amp;profile=css3">css3</a></div>
+
+</body>
+</html>

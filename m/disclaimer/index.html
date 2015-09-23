@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html manifest="cache.manifest" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>MyInsul.in</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<link rel="apple-touch-startup-image" href="../splash-screen-320x460.png" />
+  
+	<script type="text/javascript" src="../orientation.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+	
+		function loaded() {
+			document.getElementById("page_wrapper").style.visibility = "visible";
+			window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+		}
+	</script>
+
+
+  <style type="text/css">
+		@import url("../iphone.css");
+	</style>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27016394-1']);
+  _gaq.push(['_setDomainName', 'myinsul.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  
+</head>
+
+
+<body onorientationchange="updateOrientation();">
+
+<div id="page_wrapper">
+	<a onclick="parent.location='/'"><h1>MyInsul.in</h1></a>
+</div>
+<div id="padder">
+	<hr />
+	<div class="titleText" style="text-align:center">Disclaimer</div>
+	<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Myinsul.in incorporates formulas to calculate insulin dosing and is intended ONLY for use by trained medical professionals. Dosing recommendations are the result of data input by the user in the exercise of medical judgment and decision making and while we believe MyInsul.in will provide accurate and correct insulin dosing recommendations, no liability is accepted and all liability is explicitly disclaimed and rejected by MyInsul.in and the user, by using MyInsul.in, releases and agrees to hold MyInsul.in's (Alexander E. Harding and Annelise Cummings) creators harmless from any and all claims for any and all damages, injuries and deaths that may result from incorrect dosing.<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This release, indemnity and hold harmless agreement is intended to be as broad as applicable law allows and shall be interpreted under the law of the United States, State of Oregon. MyInsul.in is intended for use in the United States only.<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The user's use of MyInsul.in is acceptance of this agreement, as well as being consent to the terms of this release, indemnity and hold harmless agreement. The user's use of MyInsul.in shall serve as consideration for this agreement.  Should the user challenge the enforceability of this release, indemnity and hold harmless agreement, the user agrees to pay all attorney’s fees and costs incurred by MyInsul.in at the trial and all appellate court levels.  Should the user refuse MyInsul.in’s tender of defense and indemnity, the user shall be liable for all attorney fees and costs as well as any settlement paid by or judgment against MyInsul.in as a result of any and all claims, in addition to all pre-tender fees and costs incurred by MyInsul.in.<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This agreement is severable in full and therefore to the extent that any term(s) of this agreement may be found unenforceable or void, it is the intention of the parties to give the balance of this agreement full effect.<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No entered data of any kind is shared beyond your mobile device or computer as a result of your use of MyInsul.in. No entered data is transmitted to MyInsul.in or its creators. However, MyInsul.in reminds you that to the extent the data input by you is identifiable to a particular individual, the data may be protected by, and you may be subject to, the Health Insurance Portability and Accountability Act (“HIPAA”).  Please consult with your legal department and/or your attorney if you have any concerns about HIPAA compliance.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+/*-----------------------------
+RESET STYLES
+-----------------------------*/
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6{
+	margin:0;
+	padding:0;
+	-webkit-text-size-adjust:none; /* This stops the iPhone from automatically changing the size of the text when you flip the phone */
+	}
+body {
+	font-size: 14px; /* 62.5% means 1em = 10px */
+	}
+	
+html, body {
+	height:100%;
+}
+
+/*ul, li, ol, dl, dd, dt{
+	list-style:none;
+	padding:0;
+	margin:0;
+	}*/
+	
+	ul,ol {
+	margin-left:10px;
+	padding-left:10px;
+	}
+	
+a{
+	text-decoration:none;
+	}
+ 
+/*-----------------------------
+	SITE SPECIFIC STYLES
+-----------------------------*/
+
+body{
+	background:#1b5f9d;
+	font-family: Helvetica; /* Helvetica is on the iPhone already, so you may as well take advantage */
+	color:#000;
+	background-image:url(images/background.png);
+  background-repeat:repeat-x;
+	}
+p{
+	font-size:16px;
+	padding-bottom:8px;
+	}
+a{
+	color:#f00;
+	text-decoration:none;
+	}
+	
+hr {
+  color: #f00;
+  background:#f00;
+  background-color:#f00;
+  border-color:#f00;
+  height: 0.5px;
+  margin-top:20px;
+  margin-bottom:0px;
+  }
+  
+#footer { 
+  text-align:center;
+ position: relative;
+	margin-top: -20px; /* negative value of footer height */
+	height: 20px;
+	clear:both;
+} 
+
+#main {
+  min-height: 100%;
+}
+
+.largerText{
+        font-size:23px;
+        }
+        
+.buttonis{
+        font-size:23px;
+        width:310px;
+        }
+
+.titleText{
+        font-size:23px;
+        color:white;
+        text-shadow: 0 0 10px red;
+        margin-bottom:-5px;
+        }
+        
+.answer{
+        font-size:40px;
+        color:red;
+        font-weight:bold;
+        text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+        }
+
+/*-----------------------------
+	HEADINGS
+-----------------------------*/
+
+h1{
+	display:block;
+	width:480px;
+	height:33px;
+	background-image:url(images/logo.png);
+	text-indent:-5000px;
+	}
+
+/*-----------------------------
+	BASIC LAYOUT
+-----------------------------*/
+
+#page_wrapper{
+  padding-top:20px;
+	background:#1b5e9d url(images/page_background.png) repeat-x;
+	overflow:auto;
+	}
+	
+#padder{
+  padding-left:5px;
+	padding-right:5px;
+	overflow:auto;
+	padding-bottom: 20px;
+	}
+	
+/*-----------------------------
+	TABLE
+-----------------------------*/
+
+	#CBGTable {
+	display: table;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(0, 0, 0);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #row  {
+    display: table-row;
+    vertical-align:text-middle;
+    }
+
+  #left {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    border-right: 1px solid #fff;
+    }
+  #right {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+    border-left: 1px solid #fff;
+    }
+
+/*-----------------------------
+	ORIENTATION CLEVERNESS
+-----------------------------*/
+
+#content_left,
+#content_right,
+#content_normal,
+#content_flipped{
+	display:none;
+	}
+.show_normal,
+.show_flipped{
+	width:320px;
+	}
+.show_left,
+.show_right{
+	width:480px;
+	}
+
+.show_left #content_left,
+.show_right #content_right,
+.show_normal #content_normal,
+.show_flipped #content_flipped{
+	display:block;
+	}

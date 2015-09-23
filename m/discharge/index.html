@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html manifest="cache.manifest" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Discharge</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<link rel="apple-touch-startup-image" href="../splash-screen-320x460.png" />
+  
+	<script type="text/javascript" src="convert.js"></script>
+
+	<script type="text/javascript" src="../orientation.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+	
+		function loaded() {
+			document.getElementById("page_wrapper").style.visibility = "visible";
+			window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+		}
+	</script>
+
+
+  <style type="text/css">
+		@import url("../iphone.css");
+	</style>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27016394-1']);
+  _gaq.push(['_setDomainName', 'myinsul.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  
+</head>
+
+
+<body onorientationchange="updateOrientation();">
+
+<div id="page_wrapper">
+	<a onclick="parent.location='/'"><h1>MyInsul.in</h1></a>
+</div>
+<div id="padder">
+  <p>In planning for discharge, most patients with diabetes on oral agents at home can be discharged on oral agents. Some, however, may need to stay on insulin.<br />To decide:</p>
+	<hr />
+	<div class="titleText" style="text-align:center">A1c</div>
+	<br />
+	<b>Review Hemoglobin A1c</b>
+  <ul>
+    <li>&lt; 5.7 : Unlikely to have DM</li>
+		<li>5.7 - 6.4 : Increased risk for diabetes</li>
+		<li>&gt; 6.5 : Patient has DM</li>
+		<li>&gt; 7-8 : Requires treatment change</li>
+  </ul>
+	<hr />
+  <div class="titleText" style="text-align:center">Transition Guide</div>
+  <br />
+  Transitioning to a home regimen for patients with hyperglycemia during hospitalization: 
+	<br />Source: Transitioning to Home Regimen &copy; 2010 JHH Glucose Management Committee
+	<br /><br />
+	<form action="#" name="discharge">
+		<div style="text-align:center" class="largerText">Discharge on:
+			<select name="method" class="largerText" onchange="loadmethod()">
+				<option value="select">Select one</option>
+				<option value="diet">Diet and follow up</option>
+				<option value="neworal">New oral agent(s)</option>
+				<option value="oldoral">Home oral agent(s)</option>
+				<option value="newinsulin">New insulin regimen</option>
+				<option value="oldinsulin">Home insulin regimen</option>
+			</select> 
+			<button type="button" class="largerText" onclick="guidemethod(true);">Guide me</button>
+		</div>
+		<br />
+		<div id="methodinfo">Select a method or press the "guide me" button to get started.</div>
+	</form>
+</div>
+
+</body>
+</html>

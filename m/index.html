@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html manifest="cache.manifest" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>MyInsul.in</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="An online mobile web app towards improving insulin prescription efficiency in hospitals." />
+  <meta name="keywords" content="insulin, calculator, iPhone, android, mobile, web app, blood glucose, mangement, hospital, glargine, basal, normal, bolus, regimen, basal-bolus, nutritional, supplemental" />
+  
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<link rel="apple-touch-startup-image" href="/splash-screen-320x460.png" />
+	<!--<link rel="apple-touch-startup-image" sizes="640x960" href="/splash-screen-640x960.png" />-->
+  
+	<script type="text/javascript" src="orientation.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+	
+		function loaded() {
+			document.getElementById("page_wrapper").style.visibility = "visible";
+			window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+		}
+	</script>
+
+
+  <style type="text/css">
+		@import url("iphone.css");
+	</style>
+	
+  <link rel="stylesheet" href="addto/style/add2home.css">
+  <script type="application/javascript" src="addto/src/add2home.js"></script>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27016394-1']);
+  _gaq.push(['_setDomainName', 'myinsul.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  
+</head>
+
+
+<body onorientationchange="updateOrientation();">
+<div id="main">
+<div id="page_wrapper">
+	<h1>MyInsul.in</h1>
+</div>
+<div id="padder">
+	<noscript>Warning: You do not have Javascript enabled on your browser. This web app requires Javascript to function</noscript>
+	<br /><br />
+	<div style="text-align:center">
+    <button type="button" class="buttonis" onclick="parent.location='tdd/'">Calculate New Regimen</button>
+    <br /><br />
+    <button type="button" class="buttonis" onclick="parent.location='titrate/'">Titrate Current Regimen</button>
+    <br /><br />
+    <button type="button" class="buttonis" onclick="parent.location='convert/'">Convert IV to basal-bolus</button>
+    <br /><br />
+    <button type="button" class="buttonis" onclick="parent.location='discharge/'">Plan for Discharge</button>
+    <br /><br />
+    <button type="button" class="buttonis" onclick="parent.location='other/'">References &amp; More...</button>
+  </div>
+  
+  <br />
+</div>
+</div>
+<div id="footer">
+  <a onclick="parent.location='mailto:webmaster@myinsul.in'">Contact us!</a> | <a onclick="parent.location='disclaimer/'">Disclaimer agreement</a> | R 1.7.13
+</div>
+
+</body>
+</html>

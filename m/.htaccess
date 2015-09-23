@@ -1,0 +1,2 @@
+AddType text/cache-manifest manifest
+AddHandler application/x-httpd-php53 php

@@ -1,0 +1,729 @@
+/* GENERAL */
+
+html, body {
+  color: #000000;
+  background-color: #1b5f9d; /*1b5e9d*/
+  background-image:url('images/background.png');
+  background-attachment: fixed;
+  background-repeat:repeat-x;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+  padding: 0px 0px 20px 0px;
+  height: 100%;
+  }
+
+body {
+  margin-top:17px;
+  /*border-top: 17px solid #7f7f7f;*/
+  font-family: Helvetica;
+  font-size: 76%;
+  line-height: 1.5em;
+  height: 100.5%;
+  }
+  
+select {
+    z-index: 2;
+    }
+    
+.qscale {
+  width:100px;
+}
+
+#container {
+  float: none;
+  width: 780px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  text-align: left;
+  border-top: 5px solid #cc2b00;
+  border-bottom: 5px solid #cc2b00;
+  }
+
+#page {
+  background-color: #ffffff;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 8px;
+  }
+  
+.answer {
+  font-size:164%;
+  color:red;
+  font-weight:bold;
+  text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+  float:right;
+  }
+
+h1 {
+  font-size: 218%;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px 0px 19px 0px;
+  }
+
+h2 {
+  font-size: 164%;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px 0px 19px 0px;
+  }
+
+h3 {
+  font-size: 145%;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px 0px 16px 0px;
+  }
+  
+.large {
+  font-size: 164%;
+  }
+
+.tagline, .note, #news h2, #sidebar {
+  font-size: 90%;
+  color: #7f7f7f;
+  font-style: italic;
+  margin-bottom: 1.0em;
+  }
+
+/*ul {
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  }
+
+li {
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  }*/
+
+a {
+  color: #000000;
+  }
+
+a:link {
+  color: #000000;
+  }
+
+a:visited {
+  color: #000000;
+  }
+
+a:hover {
+  color: #ffffff;
+  background: #367095;
+  text-decoration: none;
+  }
+  
+.deact {
+    color: #ffffff;
+    background: #4c4c4c;
+    text-decoration: none;
+    }
+    
+img {
+  border-width: 0px;
+  }
+
+.image {
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  padding: 7px;
+  }
+  
+/* TEMPLATE TOP */
+
+#header {
+  padding-left: 20px;
+  padding-top: 18px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #cc2b00;
+  }
+
+#header ul {
+  float: right;
+  text-align: right;
+  width: 240px;
+  color: #000000;
+  list-style-type: none;
+  margin: 0px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 20px;
+  }
+
+#header li {
+  display: inline;
+  }
+
+#header li.active {
+  margin-left: 8px;
+  padding: 3px 9px 3px 9px;
+  font-size: 90%;
+  color: #ffffff;
+  background: #4c4c4c;
+  border-style: solid;
+  border-color: #4c4c4c;
+  border-width: 1px;
+  }
+
+#header li a {
+  text-decoration:none;
+  margin-left: 8px;
+  padding: 3px 9px 3px 9px;
+  font-size: 90%;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  }
+
+#header li a:hover {
+  border-color: #367095;
+  }
+
+#headerlogo {
+  margin-right: 240px;
+  }
+
+#headerlogo h1 {
+  display: inline;
+  }
+
+#headerlogo img.logoline {
+  display: inline;
+  margin-right: 18px;
+  margin-left: 18px;
+  }
+
+#headerlogo .tagline {
+  display: inline;
+  position: relative;
+  top: -12px;
+  }
+  
+/* LEFT, CENTER, RIGHT JUSTIFY SAME LINE */
+#justifyall {
+    position:relative;
+    height:50px;
+    width:100%;
+}
+#justifyall div {
+    width:100px;
+}
+#justleft {
+    position:absolute;
+    left:0px;
+    bottom:0px;
+    text-align:center;
+}
+#justcenter {
+    position:absolute;
+    left:50%;
+    margin-left:-50px;
+    bottom:0px;
+    text-align:center;
+}
+#justright {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    text-align:center;
+}
+
+/* HOME PAGE */
+
+#apps {
+  clear: both;
+  height: 150px;
+  line-height: 1.4em;
+  background: #f2f2f2;
+  border-top: 1px solid #cc2b00;
+  border-bottom: 1px solid #cc2b00;
+  }
+
+#apps p {
+  color: #4e4e4e;
+  }
+
+#apps a {
+  text-decoration: none;
+  }
+
+#apps1 {
+  float: left;
+  width: 210px;
+  padding: 20px 0px 20px 20px;
+  }
+
+#apps2 {
+  float: left;
+  width: 210px;
+  padding: 20px 0px 20px 30px;
+  }
+
+#apps3 {
+  float: left;
+  width: 210px;
+  padding: 20px 30px 20px 30px;
+  }
+  
+#apps2ln {
+  clear: both;
+  height: 150px;
+  line-height: 1.4em;
+  background: #f2f2f2;
+  border-bottom: 1px solid #cc2b00;
+  }
+
+#apps2ln p {
+  color: #4e4e4e;
+  }
+
+#apps2ln a {
+  text-decoration: none;
+  }
+
+#apps4 {
+  float: left;
+  width: 210px;
+  padding: 20px 0px 20px 20px;
+  }
+
+#apps5 {
+  float: left;
+  width: 210px;
+  padding: 20px 0px 20px 30px;
+  }
+
+#apps6 {
+  float: left;
+  width: 210px;
+  padding: 20px 30px 20px 30px;
+  }
+
+#sidebar {
+
+  float: right;
+  width: 260px;
+  border-top: 1px solid #cc2b00;
+  }
+
+#sidebar h2 {
+  width: 220px;
+  margin-top: 25px;
+  margin-right: 20px;
+  margin-left: 20px;
+  }
+
+#sidebar h3 {
+  width: 220px;
+  margin-right: 20px;
+  margin-left: 20px;
+  }
+
+#sidebar p {
+  width: 220px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  }
+
+#sidebar ul {
+  color: #000000;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  }
+
+#sidebar li {
+  display: inline;
+  }
+
+#sidebar li a {
+  text-decoration:none;
+  margin-right: 8px;
+  padding: 3px 9px 3px 9px;
+  font-size: 90%;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+  }
+
+#sidebar li a:hover {
+  border-color: #d9b860;
+  }
+
+#iPhone {
+  padding-left: 20px;
+  padding-top: 25px;
+  margin-right: 260px;
+  margin-bottom: 0px;
+  border-top: 1px solid #cc2b00;
+  border-right: 1px solid #cc2b00;
+  }
+
+#news {
+  padding-top: 0px;
+  margin-right: 260px;
+  margin-bottom: 50px;
+  border-right: 1px solid #cc2b00;
+  }
+
+#news h2 {
+  width: 300px;
+  margin-left: 140px;
+  margin-right: 20px;
+  }
+
+#news h3 {
+  width: 300px;
+  margin-left: 140px;
+  margin-right: 20px;
+  }
+
+#news p {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: 20px;
+  line-height: 1.65em;
+  }
+
+#news img {
+  float: left;
+  margin-left: 20px;
+  }
+  
+/* SITE STUFF */
+
+#capps {
+  clear: both;
+  height: 60px;
+  line-height: 1.4em;
+  background: #f2f2f2;
+  border-top: 1px solid #cc2b00;
+  border-bottom: 1px solid #cc2b00;
+  text-align:center;
+  }
+
+#capps p {
+  color: #4e4e4e;
+  }
+
+#capps a {
+  text-decoration: none;
+  }
+
+#capps1 {
+  float: left;
+  width: 108px;
+  padding: 20px 0px 0px 20px;
+  }
+
+#capps2 {
+  float: left;
+  width: 108px;
+  padding: 20px 0px 0px 10px;
+  }
+
+#capps3 {
+  float: left;
+  width: 108px;
+  padding: 20px 0px 0px 10px;
+  }
+
+#capps4 {
+  float: left;
+  width: 108px;
+  padding: 20px 0px 0px 10px;
+  }
+
+#capps5 {
+  float: left;
+  width: 108px;
+  padding: 20px 0px 0px 10px;
+  }
+
+#capps6 {
+  float: left;
+  width: 108px;
+  padding: 20px 20px 0px 10px;
+  }
+  
+/* DEVELOPMENT */
+
+#whole {
+  border-top: 1px solid #cc2b00;
+  padding-top:20px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  width:740px;
+  float:left;
+  }
+  
+#whole h2 {
+  text-align:center;
+  font-size:23px;
+  color:#cc2b00;
+  text-shadow: 0 0 10px #cc2b00;
+  margin-bottom:5px
+  }
+  
+#whole h2 a {
+  text-decoration:none;
+  text-align:center;
+  font-size:23px;
+  color:#cc2b00;
+  text-shadow: 0 0 10px #cc2b00;
+  margin-bottom:5px
+}
+  
+#whole h3 {
+  }
+
+#whole p {
+  line-height: 1.65em;
+  }
+
+#convertl {
+  border-top: 1px solid #cc2b00;
+  margin-top:0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  padding-right:10px;
+  width:360px;
+  float:left;
+  }
+  
+#convertl h2 {
+  text-align:center;
+  font-size:23px;
+  color:#cc2b00;
+  text-shadow: 0 0 10px #cc2b00;
+  margin-bottom:5px
+  }
+  
+#convertl h3 {
+  }
+
+#convertl p {
+  line-height: 1.65em;
+  }
+  
+#convertr {
+  border-top: 1px solid #cc2b00;
+  margin-top:0px;
+  margin-left: 0px;
+  margin-bottom: 50px;
+  padding-left:10px;
+  width:360px;
+  float:left;
+  }
+  
+#convertr h2 {
+  text-align:center;
+  font-size:23px;
+  color:#cc2b00;
+  text-shadow: 0 0 10px #cc2b00;
+  margin-bottom:5px
+  }
+  
+#convertr h3 {
+  }
+
+#convertr p {
+  line-height: 1.65em;
+  }
+  
+.step {
+  border-top: 1px solid #cc2b00;
+  padding-top:5px;
+  }
+
+/*-----------------------------
+	TABLE
+-----------------------------*/
+
+#CBGTable {
+  border-radius: 20px;
+  background-color: #fff;
+  width: 100%;
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(54, 112, 149);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(54, 112, 149, 0.4);
+  text-align:center;
+  font-size:16px;
+  }
+    
+#InsulinsTable {
+  border-color: #600;
+  border-width: 0 0 1px 1px;
+  border-style: dashed;
+  width: 100%;
+  text-align:center;
+  font-size:16px;
+  }
+
+.InsulinsRapid {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(54, 112, 149);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(54, 112, 149, 0.4);
+}
+
+.InsulinsShort {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(255, 128, 64);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(255, 128, 64, 0.4);
+}
+
+.InsulinsInt {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(228, 228, 0);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(228, 228, 0, 0.4);
+}
+
+.InsulinsLong {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(0, 128, 0);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(0, 128, 0, 0.4);
+}
+
+.InsulinsPre {
+  /* Fallback for web browsers that don't support RGBa */
+  background-color: rgb(128, 0, 128);
+  /* RGBa with 0.6 opacity */
+  background-color: rgba(128, 0, 128, 0.4);
+}
+
+#InsulinsTable td {
+    border-width: 1px 1px 0 0;
+    border-style: dashed;
+    margin: 0;
+    padding: 4px;
+}
+/*
+
+#news {
+  padding-top: 0px;
+  margin-right: 260px;
+  margin-bottom: 50px;
+  border-right: 1px solid #cc2b00;
+  }
+
+#news h2 {
+  width: 300px;
+  margin-left: 140px;
+  margin-right: 20px;
+  }
+
+#news h3 {
+  width: 300px;
+  margin-left: 140px;
+  margin-right: 20px;
+  }
+
+#news p {
+  width: 300px;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  margin-right: 20px;
+  line-height: 1.65em;
+  }
+
+#news img {
+  float: left;
+  margin-left: 20px;
+  }
+  
+*/
+
+/* TINYBOX SCRIPT */
+#tinybox {
+  position:absolute;
+  display:none;
+  padding:10px;
+  background:#fff url(preload.gif) no-repeat 50% 50%;
+  border:10px solid #e3e3e3;
+  z-index:2000
+  }
+#tinymask {
+  position:absolute;
+  display:none;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background:#000;
+  z-index:1500
+  }
+#tinycontent {background:#fff}
+
+/* TEMPLATE BOTTOM */
+
+#footer {
+  clear: both;
+  margin-bottom: 31px;
+  border-top: 1px solid #cc2b00; /* #cccccc */
+  font-size: 90%;
+  color: #7f7f7f;
+  line-height: 1.4em;
+  height: 100%;
+  }
+
+#footer ul {
+  float: right;
+  text-align: right;
+  width: 230px;
+  margin-top: 14px;
+  margin-right: 20px;
+  color: #000000;
+  list-style-type: none;
+  }
+
+#footer li {
+  display: inline;
+  }
+
+#footer p {
+  margin-top: 14px;
+  margin-left: 20px;
+  margin-right: 220px;
+  }
+
+#footer .name {
+  color: #000000;
+  }
+
+#sitenotes {
+  display: block;
+  color: #575757;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 80%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 10px 0px 40px 0px;
+  }
+
+#sitenotes a {
+  color: #3c3c3c;
+  }
+
+#sitenotes a:hover {
+  color: #b9b9b9;
+  background: #3c3c3c;
+  text-decoration: none;
+  }

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html manifest="../cache.manifest" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>TDD Calc</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	
+  <link rel="apple-touch-startup-image" href="../splash-screen-320x460.png" />
+
+	<script type="text/javascript" src="../orientation.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+	
+		function loaded() {
+			document.getElementById("page_wrapper").style.visibility = "visible";
+			window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+		}
+	</script>
+
+
+  <style type="text/css">
+		@import url("../iphone.css");
+	</style>
+	
+  <link rel="stylesheet" href="../addto/style/add2home.css">
+  <script type="application/javascript" src="../addto/src/add2home.js"></script>
+
+  <script type="text/javascript" src="convert.js"></script>
+  
+  <script type="text/javascript" src="minmax.js"></script>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27016394-1']);
+  _gaq.push(['_setDomainName', 'myinsul.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  
+</head>
+
+
+<body onLoad="convert();" onorientationchange="updateOrientation();">
+
+<div id="page_wrapper">
+	<a onclick="parent.location='../'"><h1>MyInsul.in</h1></a>
+</div>
+<div id="padder">
+  Use this form to convert from IV to Basal/Bolus insulin regimen:<br />
+	Note: Values are conservative.
+    <hr />
+		<div class="titleText" style="text-align:center">Total Daily Dose</div>
+		<br />
+		<FORM ACTION="#" NAME="insulin">
+      <div style="text-align:center">
+			Insulin infusion rate:
+			<select name="iv" ACTION="#" ONCHANGE="cust()" class="largerText">
+        <option value=0.25>0.25</option>
+        <option value=0.5>0.5</option>
+        <option value=1.0>1.0</option>
+        <option value=1.5>1.5</option>
+        <option value=2.0 selected="yes">2.0</option>
+        <option value=2.5>2.5</option>
+        <option value=3.0>3.0</option>
+        <option value=3.5>3.5</option>
+        <option value=4.0>4.0</option>
+        <option value=4.5>4.5</option>
+        <option value=5.0>5.0</option>
+        <option value=5.5>5.5</option>
+        <option value=6.0>6.0</option>
+        <option value=6.5>6.5</option>
+        <option value=7.0>7.0</option>
+        <option value=7.5>7.5</option>
+        <option value=8.0>8.0</option>
+        <option value=8.5>8.5</option>
+        <option value=9.0>9.0</option>
+        <option value=9.5>9.5</option>
+        <option value=10.0>10.0</option>
+        <option value="cust">Larger/precise</option>
+      </select>
+      <br />
+      Units per hour, six hour average.
+      <br />
+      <span id="cust"></span>
+      <br />
+      <label for="food">Current IV dose while receiving nutrition<br />(IV or oral): </label><input type="checkbox" name="food" id="food" value="1" onClick="convert()" /> 
+      <br /><br />
+      Conversion sensitivity:
+			<select name="sens" ACTION="#" ONCHANGE="cust()" class="largerText">
+        <option value=0.80>80%</option>
+        <option value=0.70>70%</option>
+        <option value=0.60>60%</option>
+      </select>
+
+      </div>
+      <br />
+      <br />
+      <span id="tdd" class="answer">0</span> <span class="largerText">Total Daily Dose (U)</span>
+      <br />
+      <span id="button"><button type='button' class='largerText' onclick="parent.location='../tdd/#tddskip'">Calculate new regimen...</button></span>
+    </FORM>
+</div>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html manifest="../cache.manifest" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>TDD Calc</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	
+  <link rel="apple-touch-startup-image" href="../splash-screen-320x460.png" />
+
+
+	<script type="text/javascript" src="../orientation.js"></script>
+	<script type="text/javascript">
+		window.addEventListener("load", function() { setTimeout(loaded, 100) }, false);
+    
+		function loaded() {
+			document.getElementById("page_wrapper").style.visibility = "visible";
+			window.scrollTo(0, 1); // pan to the bottom, hides the location bar
+    }
+	</script>
+
+  <style type="text/css">
+		@import url("../iphone.css");
+	</style>
+	
+  <link rel="stylesheet" href="../addto/style/add2home.css">
+  <script type="application/javascript" src="../addto/src/add2home.js"></script>
+
+  <script type="text/javascript" src="convert.js"></script>
+  
+  <script type="text/javascript" src="minmax.js"></script>
+  
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27016394-1']);
+  _gaq.push(['_setDomainName', 'myinsul.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+  
+</head>
+
+
+<body onload="pretask()" onorientationchange="updateOrientation();">
+
+<div id="page_wrapper">
+	<a onclick="parent.location='../'"><h1>MyInsul.in</h1></a>
+</div>
+<div id="padder">
+  <input type="button" value="Reset" onclick="window.location.reload()" style="float:right" class="largerText" />
+  <br /><br />
+    <hr />
+		<div class="titleText" style="text-align:center">Total Daily Dose</div>
+		<br />
+		<FORM ACTION="#" NAME="insulin">
+      <div style="text-align:center">
+      <span id="sourceexpand">Derive TDD from:&nbsp;&nbsp;<a onclick="sourceexpand();">More info &raquo;</a></span><br />
+      <div id="switchweighttdd">
+        <button TYPE="button" class="largerText" NAME="tddsource" id="weights" ONCLICK="setweight()" disabled="yes" style="width:95px;text-indent:-12px;">Weight</button> 
+        <button TYPE="button" class="largerText" NAME="tddsource" id="tdds" ONCLICK="settdd()" style="width:95px;">TDD</button> 
+        <button TYPE='button' class='largerText' NAME='tddsource' id='basals' ONCLICK='setbasal()' style='width:95px;text-indent:-5px;'>Basal</button>
+			</div>
+      <br />
+      </div>
+    <div id="source">
+      <div style="text-align:center">
+			<span class="largerText">Weight:</span> <INPUT TYPE='tel' NAME="BW" ONKEYUP="convert()" class="largerText" size=3 maxlength=3 autofocus>
+			<span id="switchkglb">
+			<button TYPE="button" class="largerText" NAME="weight" id="kg" ONCLICK="setkg()" style="width:20px;text-indent:-12px;" disabled="yes">kg</button>
+      <button TYPE="button" class="largerText" NAME="weight" id="lb" ONCLICK="setlb()" style="width:20px;text-indent:-8px;">lb</button>
+      </span>
+			<br />
+			<span class="largerText">U/kg:</span>
+      <span id="ukgwizard">
+        <select name='ukg' ACTION='#' ONCHANGE='cust()' class='largerText'><option value=0.2>0.2 - DM1/Sensitive</option><option value=0.3>0.3 - Sensitive</option><option value=0.4 selected='yes'>0.4 - BMI 18.5-25</option><option value=0.5>0.5 - BMI 25-30</option><option value=0.6>0.6 - BMI &lt; 30</option><option value=0.7>0.7 - Resistant</option><option value=0.8>0.8 - Resistant</option><option value=0.9>0.9 - Resistant</option><option value=1.0>1.0 - Resistant</option><option value='1.1'>1.1 - Resistant</option><option value='1.2'>1.2 - Resistant</option><option value='1.3'>1.3 - Resistant</option><option value='1.4'>1.4 - Resistant</option><option value='1.5'>1.5 - Resistant</option><option value='cust'>Custom/precise</option></select><div id='custukg'></div>
+        <div id="custukg"></div>
+      </span>
+      <button type="button" class="largerText" onclick="ukgwizard(true);">Guide me</button>
+      <br />
+      <span id="ukgexpand"><a onclick="ukgexpand();">More info &raquo;</a></div></span>
+      </div>
+      <div style="text-align:center">
+      <br />
+      <span class="largerText">Nutrition:</span>
+      <select name="feed" ACTION="#" ONCHANGE="feedmeals()" class="largerText">
+        <option value="norm">3 Meals per day</option>
+        <option value="cont">Continuous tube feed</option>
+        <option value="bolT">Bolus tube feed</option>
+        <option value="50">&lt;50% meal intake</option>
+        <option value="npo">NPO</option>
+      </select>
+      <br /><br />
+      <span id="bolTnum"></span>
+	  <span class='largerText'>Distribution of Basal:Bolus</span> 
+	  <span id="distnutrition">
+		<select name="dist" action="#" onchange="convert()" class="largerText">
+		  <option value=".5">50:50 - Typical</option>
+		  <option value=".4" disabled>40:60 - Continuous feed</option>
+		  <option value="-1" disabled>40:00 - Not eating</option>
+		  <option value=".4">40:60 - Steroids</option>
+		  <option value=".3">30:70 - Steroids</option>
+		  <option value=".33">33:67 - Renal failure</option>
+		  <option value=".33">33:67 - Hepatic failure</option>
+        </select>
+	  </span>
+    </div>
+      <span id="hometddview"></span>
+      <a name="tddskip"></a><span id="tddanswer"><span id="tdd" class="answer">0</span> <span class="largerText">Total Daily Dose (Units)</span></span>
+      <hr />
+      <div class="titleText" style="text-align:center">Basal Insulin</div>
+      <span id="basexpand"><div style="text-align:center"><a onclick="basexpand();">More info &raquo;</a></div></span>
+      <br />
+      <div style="text-align:center">
+      <select name="basalchanges" ACTION="#" ONCHANGE="basalchange()" class="largerText">
+        <option value="glargine">Glargine</option>
+        <option value="nph1">NPH once/day</option>
+        <option value="nph2">NPH twice/day</option>
+        <option value="detemir1">Detemir once/day</option>
+        <option value="detemir2">Detemir twice/day</option>
+      </select>
+      </div>
+      <span id="bas" class="answer">0</span> <span class="largerText">Units/day</span>
+      <span id="basaltwiceamtenable"></span>
+
+      <hr />
+      <div class="titleText" style="text-align:center">Nutritional Insulin</div>
+      <span id="nutexpand"><div style="text-align:center"><a onclick="nutexpand();">More info &raquo;</a></div></span>
+      <br />
+      <div style="text-align:center">
+      <span id="boluschangesfeed"><select name="boluschanges" ACTION="#" ONCHANGE="boluschange()" class="largerText">
+        <option value="aspart">Aspart</option>
+        <option value="regular">Regular</option>
+        <option value="glulisine">Glulisine</option>
+        <option value="lispro">Lispro</option>
+      </select>
+      </span>
+      </div>
+      <span id="nutfeed" class="answer">0</span> <span id="nutdesc" class="largerText">Units/meal</span>&nbsp;
+      <br />(<span id="nuttotal">0</span> Units/day total)
+      <br />
+      <span id="diabeticdiet">Make sure patient is on a diabetic diet.</span>
+      <br />
+      <hr />
+      <div class="titleText" style="text-align:center">Supplemental Insulin</div>
+      <span id="supexpand"><div style="text-align:center"><a onclick="supexpand();">More info &raquo;</a></div></span>
+      <br />
+      <div style="text-align:center">
+      <span id="req" class="largerText">N/A</span><span class="largerText"> DOSE</span>
+      <br />
+      <span class="largerText" id="supType">Aspart</span>
+      </div>
+      <br />
+      One unit of insulin will drop BG by <b><span id="corrF">0</span></b> points (correction factor).
+      <br /><br />
+      <div style="text-align:center">
+      Minimum CBG to see: <INPUT TYPE='tel' NAME="minCBG" ONKEYUP="convert()" class="largerText" size="3" maxlength="3" value="100">
+      <br /><br />
+      CBG increment by: 
+      <select name="incCBG" action="#" onchange="incCBGf()" class="largerText">
+        <option value="auto">Optimize</option>
+        <option value="corr">Corr Factor</option>
+		<option value="2corr">2x Corr Factor</option>
+		<option value="40" selected="selected">40 mg/dL</option>
+        <option value="cust">Custom</option>
+      </select>
+      <span id="incCBGcust"></span>
+      </div>
+      <br />
+      <div id="tableCBG">[insert input variables to generate table.]</div>
+    </FORM>
+</div>
+</body>
+</html>

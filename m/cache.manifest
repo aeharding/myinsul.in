@@ -1,0 +1,47 @@
+﻿CACHE MANIFEST
+# Update: 11:46 AM Sunday, March 31, 2013
+# My Insulin
+
+CACHE:
+index.html
+iphone.css
+orientation.js
+splash-screen-320x460.png
+apple-touch-icon-57x57.png
+apple-touch-icon-114x114.png
+favicon.ico
+disclaimer/
+disclaimer/index.html
+discharge/
+discharge/index.html
+discharge/convert.js
+other/
+other/index.html
+other/guide.pdf
+other/insulins.pdf
+other/minmax.js
+other/convert.js
+other/a1c.gif
+images/logo.png
+images/page_background.png
+images/background.png
+titrate/
+titrate/convert.js
+titrate/index.html
+titrate/minmax.js
+tdd/
+tdd/convert.js
+tdd/minmax.js
+tdd/index.html
+convert/
+convert/convert.js
+convert/index.html
+convert/minmax.js
+addto/style/add2home.css
+addto/src/add2home.js
+
+FALLBACK:
+/ /offline.html
+
+NETWORK:
+*
