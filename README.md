@@ -1,4 +1,4 @@
-# myinsul.in
+![myinsul.in logo](myinsulin.png)
 
 Myinsul.in is hosted for posterity's sake.
 
